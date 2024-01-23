@@ -12,8 +12,11 @@ dependencies:
     specifier: ^16.3.1
     version: 16.3.1
   llamaindex:
-    specifier: 0.0.45
-    version: 0.0.45(supports-color@9.4.0)
+    specifier: 0.0.44
+    version: 0.0.44(supports-color@9.4.0)
+  mongodb:
+    specifier: ^6.3.0
+    version: 6.3.0
   next:
     specifier: ^14.0.3
     version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -2759,8 +2762,8 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
-  /llamaindex@0.0.45(supports-color@9.4.0):
-    resolution: {integrity: sha512-hHQKuxeQcafAVa3R8EN+droiRAfnQPe3UQ4iIhF74j1bF6Ys5hEdM3Fu4UEo0/8swQiJPVEhhm43ezAveDUpFQ==}
+  /llamaindex@0.0.44(supports-color@9.4.0):
+    resolution: {integrity: sha512-+yrodGHXp/XkCQJmjPh2WnhrHmN8qNZdsXHwhtic1B1fWBNOsLIgvgk+LA2t04bXx9LWKkmrqrkLpWtvufgH5g==}
     engines: {node: '>=18.0.0'}
     dependencies:
       '@anthropic-ai/sdk': 0.9.1
@@ -2787,6 +2790,7 @@ packages:
       rake-modified: 1.0.8
       replicate: 0.21.1
       string-strip-html: 13.4.5
+      uuid: 9.0.1
       wink-nlp: 1.14.3
     transitivePeerDependencies:
       - '@aws-sdk/credential-providers'
@@ -4659,6 +4663,11 @@ packages:
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+
+  /uuid@9.0.1:
+    resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
+    hasBin: true
+    dev: false
 
   /vue@3.4.13(typescript@5.3.3):
     resolution: {integrity: sha512-FE3UZ0p+oUZTwz+SzlH/hDFg+XsVRFvwmx0LXjdD1pRK/cO4fu5v6ltAZji4za4IBih3dV78elUK3di8v3pWIg==}

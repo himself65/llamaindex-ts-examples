@@ -1,4 +1,3 @@
-/* eslint-disable turbo/no-undeclared-env-vars */
 import {
   ContextChatEngine,
   LLM,
@@ -19,8 +18,8 @@ async function getDataSource(llm: LLM) {
   });
   const store = new MongoDBAtlasVectorSearch({
     mongodbClient: client,
-    dbName: process.env.MONGODB_DATABASE,
-    collectionName: process.env.MONGODB_VECTORS,
+    dbName: process.env.MONGODB_DATABASE!,
+    collectionName: process.env.MONGODB_VECTORS!,
     indexName: process.env.MONGODB_VECTOR_INDEX,
   });
 

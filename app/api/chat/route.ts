@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
     }
 
     const llm = new OpenAI({
-      model: process.env.MODEL || "gpt-3.5-turbo",
+      model: (process.env.MODEL || "gpt-3.5-turbo") as any,
       maxTokens: 512,
     });
 
@@ -55,6 +55,7 @@ export async function POST(request: NextRequest) {
 
     const response = await chatEngine.chat(
       lastMessageContent as MessageContent,
+      // @ts-expect-error
       messages,
       true,
     );
