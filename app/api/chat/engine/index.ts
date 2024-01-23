@@ -4,12 +4,14 @@ import {
   MongoDBAtlasVectorSearch,
   serviceContextFromDefaults,
   VectorStoreIndex,
+  PDFReader,
 } from "llamaindex";
 import { MongoClient } from "mongodb";
 import { checkRequiredEnvVars, CHUNK_OVERLAP, CHUNK_SIZE } from "./shared.mjs";
 
 async function getDataSource(llm: LLM) {
   checkRequiredEnvVars();
+  new PDFReader();
   const client = new MongoClient(process.env.MONGO_URI!);
   const serviceContext = serviceContextFromDefaults({
     llm,
